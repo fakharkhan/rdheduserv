@@ -5,7 +5,7 @@ class CreateVideos < ActiveRecord::Migration
       t.string :title
       t.string :tags
       t.text :description
-      t.string :remoteUrl
+      t.string :videoid
 
       t.timestamps
     end

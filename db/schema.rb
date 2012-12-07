@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20121207063637) do
     t.string   "title"
     t.string   "tags"
     t.text     "description"
-    t.string   "remoteUrl"
+    t.string   "videoid"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

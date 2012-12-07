@@ -3,7 +3,7 @@ Rdheduserv::Application.routes.draw do
 
 
   resources :categories
-
+  match 'play/:id' => 'application#play'
   match 'about' => 'application#about'
   match 'contact' => 'application#contact'
   root :to => 'application#index'

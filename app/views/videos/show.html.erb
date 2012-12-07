@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<iframe src="http://player.vimeo.com/video/ <%= @video.videoid %>?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 <p>
   <b>Category:</b>
   <%= @video.category.name %>
@@ -21,8 +21,8 @@
 </p>
 
 <p>
-  <b>Remoteurl:</b>
-  <%= @video.remoteUrl %>
+  <b>videoid:</b>
+  <%= @video.videoid %>
 </p>
 
 

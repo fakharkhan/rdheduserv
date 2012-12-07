@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<iframe src="http://player.vimeo.com/video/ <%= @video.videoid %>?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<p>
+  <b>Title:</b>
+  <%= @video.title %>
+</p>
+<p>
+  <b>Category:</b>
+  <%= @video.category.name %>
+</p>
+
+
+<p>
+  <b>Description:</b>
+  <%= @video.description %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @video.tags %>
+</p>
+

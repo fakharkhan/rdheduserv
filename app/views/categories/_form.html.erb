@@ -1,25 +1,13 @@
-<%= form_for(@category) do |f| %>
-  <% if @category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<%= simple_form_for @category, :html => { :class => 'form-horizontal' } do |f| %>
+    <fieldset>
+      <legend><%= controller.action_name.capitalize %> Category</legend>
 
-      <ul>
-      <% @category.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <%= f.input :name %>
+      <%= f.input :description,:as => :text ,:input_html => { :cols => 50, :rows => 10 } %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="form-actions">
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+        <%= link_to 'Cancel', categories_path, :class => 'btn' %>
+      </div>
+    </fieldset>
 <% end %>

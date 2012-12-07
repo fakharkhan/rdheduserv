@@ -29,17 +29,26 @@
           <li><%= link_to "Register" %></li>
         </ul>
       </div>
+
     </div>
   </div>
 </div>
-
+<div class="container">
+  <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+        <a class="close" data-dismiss="alert">x</a>
+        <%= msg  %>
+      </div>
+  <% end %>
+  <!-- Rest of content -->
+</div>
 <div class="container-fluid">
-  <br/><br/><br/>
+
   <div class="row-fluid">
     <div class="span3">
       <div class="well sidebar-nav">
         <ul class="nav nav-list">
-          <li class="nav-header">Favourites</li>
+          <li class="nav-header">Courses</li>
           <li ><a href="#">Link</a></li>
           <li class="active"><a href="#">Active Link</a></li>
           <li><a href="#">Link</a></li>
