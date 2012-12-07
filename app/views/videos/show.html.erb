@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @video.category.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @video.title %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @video.tags %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @video.description %>
+</p>
+
+<p>
+  <b>Remoteurl:</b>
+  <%= @video.remoteUrl %>
+</p>
+
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
