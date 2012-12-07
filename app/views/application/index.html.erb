@@ -6,7 +6,7 @@
 <div class="row-fluid">
 <% @videos.each do |video| %>
   <div class="span4">
-    <h2><%= video.title %></h2>
+    <h4><%= video.title %></h4>
     <p><%= video.description %></p>
     <p><a class="btn btn-success" href="/play/<%= video.videoid %>">Play Video<i class="icon-play"></i></a></p>
   </div><!--/span-->

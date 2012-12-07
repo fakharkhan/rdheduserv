@@ -1,10 +1,10 @@
 <%= simple_form_for @video, :html => { :class => 'form-horizontal' } do |f| %>
     <fieldset>
       <legend><%= controller.action_name.capitalize %> Video</legend>
-
+      <%= f.input :category_id, :collection => Category.all,:include_blank => false %>
       <%= f.input :title %>
       <%= f.input :tags %>
-      <%= f.input :videoid %>
+      <%= f.input :videoid, :hint => 'Upload your video on <a href="https://vimeo.com/upload" target="_blank">vimeo.com</a> to get video ID' %>
       <%= f.input :description, :as => :text ,:input_html => { :cols => 50, :rows => 10 } %>
 
       <div class="form-actions">
